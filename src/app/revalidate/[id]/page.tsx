@@ -1,6 +1,8 @@
 import supabase from '@/utils/supabase';
 import { notFound } from 'next/navigation';
 
+export const revalidate = 60;
+
 export async function generateStaticParams() {
   const { data: posts } = await supabase.from('posts').select('id');
   return posts ?? [];
