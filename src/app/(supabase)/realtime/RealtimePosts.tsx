@@ -7,6 +7,5 @@ export default function RealtimePosts({
 }: {
   serverPosts: Post[];
 }) {
-  console.log(serverPosts);
   return <pre>{JSON.stringify(serverPosts, null, 2)}</pre>;
 }
